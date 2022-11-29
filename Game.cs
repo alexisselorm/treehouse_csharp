@@ -15,5 +15,7 @@ using TreehouseDefense;
       point = new Point(8,5);
       isOnMap = map.OnMap(point);
       Console.WriteLine(isOnMap);
+      Console.WriteLine(point.DistanceTo(5,5));
+      
     }
   }
