@@ -12,5 +12,15 @@ namespace TreehouseDefense{
       Width = width;
       Height = height;
     }
+    public bool OnMap(Point point){
+      // Takes points on the map and checks whether the player is in bounds or out of bounds
+      return point.X >=0 && point.X < Width &&
+             point.Y >= 0 && point.Y < Height;
+
+      
+
+    }
+
+    
   }
 }
