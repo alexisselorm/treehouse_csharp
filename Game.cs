@@ -5,17 +5,22 @@ using TreehouseDefense;
   {
     public static void Main(){
       Console.WriteLine("Hello");
-    
-    Tower tower = new Tower();
+
       Map map = new Map(8,5);
 
-      Point point = new Point(4,2);
-      bool isOnMap = map.OnMap(point);
+      MapLocation x = new MapLocation(4,2);
+      bool isOnMap = map.OnMap(x);
       Console.WriteLine(isOnMap);
-      point = new Point(8,5);
-      isOnMap = map.OnMap(point);
+      x = new MapLocation(8,5);
+      isOnMap = map.OnMap(x);
       Console.WriteLine(isOnMap);
-      Console.WriteLine(point.DistanceTo(5,5));
+      Console.WriteLine(x.DistanceTo(5,5));
+
+      // Type checks
+      Console.WriteLine(x is MapLocation);
+      Console.WriteLine(x is Point);
+      Point point = new Point(3,3);
+      Console.WriteLine(point is MapLocation);
       
     }
   }
