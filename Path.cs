@@ -7,6 +7,18 @@ namespace TreehouseDefense{
     {
       _path = path;
     }
+    public GetLocationAtl(int pathStep)
+    {
+      //If a path step isn't in the range of our map location, return null; If you can, avoid using exceptions.
+      if(pathStep < _path.Length)
+      {
+      return _path[pathStep];
+      }
+      else
+      {
+        return null;
+      }
+    }
     
   }
 }
