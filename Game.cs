@@ -20,7 +20,7 @@ using TreehouseDefense;
              new MapLocation(7,2,map)
             }
         );
-      MapLocation location = path.GetLocationAt(8);
+      MapLocation location = path.GetLocationAt(5);
         if(location != null){
       Console.WriteLine(location.X+ ","+location.Y);
         }
