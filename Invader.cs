@@ -12,9 +12,18 @@ namespace TreehouseDefense{
     // Create a health property for the invader. Its getter is public so that users may see its health. but the setter is private. If other classes want to change the value or health, they can use the 'DecreaseHealth' method
     public int Health { get; private set; } = 2;
 
+    // If invader has reached the end of the path
+    public bool HasScored {
+      get { return _pathStep >= _path.Length; }
+      }
+// Return true if invaders Health is less than or equal to 0
+    public bool IsNeutralized => Health <=0;
+
+    public bool IsActive => !(IsNeutralized || HasScored);
+
     // Since the setter is private we can only set the location of an invader in its class
     public Invader (Path path) {
-      _path = path
+      _path = path;
     }
     public void Move() => _pathStep+=1;
 
