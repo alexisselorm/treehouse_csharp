@@ -1,17 +1,9 @@
 namespace TreehouseDefense{
   class Invader{
-    
-    private MapLocation _location;
-    
+
     // Accessor Methods. Getters and setters
     // Syntactic sugar for getters and setters
-    public MapLocation Location{
-      get{
-        return _location;
-      }
-      set{
-        _location = value
-      }
-    }
+    // Other class will get the invader's location on the map, but they can't set it. This will allow only the invader itself to set its new location
+    public MapLocation Location{ get; private set; }
   }
 }
