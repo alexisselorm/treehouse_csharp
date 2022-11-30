@@ -8,12 +8,17 @@ namespace TreehouseDefense{
     // Other class will get the invader's location on the map, but they can't set it. This will allow only the invader itself to set its new location
         // Get the invader's current location. This is a computed property.
     public MapLocation Location => _path.GetLocationAt(_pathStep);
-      
+
+    // Create a health property for the invader. Its getter is public so that users may see its health. but the setter is private. If other classes want to change the value or health, they can use the 'DecreaseHealth' method
+    public int Health { get; private set; } = 2;
 
     // Since the setter is private we can only set the location of an invader in its class
     public Invader (Path path) {
       _path = path
     }
     public void Move() => _pathStep+=1;
+
+    public void DecreaseHealth(int factor) =>   Health -= factor;
+    
   }
 }
