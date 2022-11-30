@@ -9,7 +9,17 @@ using TreehouseDefense;
 
       try{
         
-      MapLocation maplocation = new MapLocation(40,20,map);
+      MapLocation[] path = {
+        new MapLocation(0,2,map),
+        new MapLocation(1,2,map),
+        new MapLocation(2,2,map),
+        new MapLocation(3,2,map),
+        new MapLocation(4,2,map),
+        new MapLocation(5,2,map),
+        new MapLocation(6,2,map),
+        new MapLocation(7,2,map)
+      };
+        
       }
       // The exception message received here comes from the constructor in mapLocation where the exception is first caught and a message is set.
       catch (OutOfBoundsException ex){
