@@ -12,8 +12,14 @@ using TreehouseDefense;
       MapLocation maplocation = new MapLocation(40,20,map);
       }
       // The exception message received here comes from the constructor in mapLocation where the exception is first caught and a message is set.
-      catch (Exception ex){
+      catch (OutOfBoundsException ex){
         Console.WriteLine(ex.Message);
+      }
+      catch (TreehouseDefenseException){
+        Console.WriteLine("Unhandled TreeHouseDefenseException");
+      }
+      catch (Exception){
+        Console.WriteLine("Unhandled Exception");
       }
      
       
