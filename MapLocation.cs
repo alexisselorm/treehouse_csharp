@@ -13,6 +13,12 @@ namespace TreehouseDefense
        throw new OutOfBoundsException(x+" , "+y+ " is outside the boundaries of the map");
      }
     }
+
+// Checks how far the invader is from the tower.
+    public InRangeOf(MapLocation location, int range)
+{
+       return DistanceTo(location) <= range;
+  }
     
   }
 }
