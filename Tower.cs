@@ -1,16 +1,24 @@
+using System;
 namespace TreehouseDefense{
   class Tower{
     private readonly MapLocation _location;
        // Constant variables
     private const int _range=1;
     private const int _power =1;
+    private const double _accuracy = .75;
 
-    private static readonly System.Random _random = new System.Random();
+    private static readonly Random _random = new Random();
 
     public Tower(MapLocation location)
     {
       _location = location;
     }
+
+    public bool IsSuccessfulShot(){
+      // The chance that a tower hits an invader is 75%(.75) so if the random number generated is less than .75, the shot hit the target, miss otherwise.
+      return _random.NextDouble() < _accuracy;
+    }
+    
     public void FireOnInvaders(Invader[] invaders)
     {
    
@@ -19,7 +27,20 @@ namespace TreehouseDefense{
         // Do something with invader
         if(invader.IsActive && _location.InRangeOf(invader.Location,_range))
         {
-          invader.DecreaseHealth(_power);
+          if(IsSuccessfulShot()){
+            
+           invader.DecreaseHealth(_power);
+            Console.WriteLine("Shot at and hit an invader");
+
+            if(invader.IsNeutralized){
+              Console.WriteLine("Neutralized an invader");
+            }
+          }
+          else
+          {
+            Console.WriteLine("Shot at and missed an invader");
+            
+          }
 // Forcefully end the loop after the tower shoots one invader once.
           break;
         }
