@@ -15,7 +15,7 @@ namespace TreehouseDefense
     }
 
 // Checks how far the invader is from the tower.
-    public InRangeOf(MapLocation location, int range)
+    public bool InRangeOf(MapLocation location, int range)
 {
        return DistanceTo(location) <= range;
   }

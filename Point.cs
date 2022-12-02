@@ -24,6 +24,10 @@ namespace TreehouseDefense{
       // In a single line
       // return (int) Math.Sqrt(Math.Pow(X-x,2) + Math.Pow(Y-y,2));
     }
+    public int DistanceTo(Point point)
+        {
+            return DistanceTo(point.X, point.Y);
+        }
     
     }
 }
