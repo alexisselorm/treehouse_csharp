@@ -20,10 +20,31 @@ using TreehouseDefense;
              new MapLocation(7,2,map)
             }
         );
-      MapLocation location = path.GetLocationAt(5);
-        if(location != null){
-      Console.WriteLine(location.X+ ","+location.Y);
-        }
+        Invader[] invaders = {
+          new Invader(path),
+          new Invader(path),
+          new Invader(path),
+          new Invader(path)
+          };
+
+        Tower[] towers = {
+          new Tower(new MapLocation(1,3,map)),
+          new Tower(new MapLocation(3,3,map)),
+          new Tower(new MapLocation(5,3,map))
+        };
+        
+        Level level = new Level(invaders){
+          // Assigning the towers property inline, as the object is being constructed
+          Towers=towers
+        };
+        bool playerWon = level.Play();
+
+        Console.WriteLine("Player " + (playerWon ? "won" :"lost"));
+        
+      // MapLocation location = path.GetLocationAt(5);
+      //   if(location != null){
+      // Console.WriteLine(location.X+ ","+location.Y);
+      //   }
       }
       // The exception message received here comes from the constructor in mapLocation where the exception is first caught and a message is set.
       catch (OutOfBoundsException ex){
