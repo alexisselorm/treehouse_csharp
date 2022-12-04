@@ -3,6 +3,7 @@ namespace TreehouseDefense{
 
     private readonly MapLocation[] _path;
 
+    // Returns the path's length
     public int Length => _path.Length;
     
     public Path(MapLocation[] path)

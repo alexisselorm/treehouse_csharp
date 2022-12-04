@@ -21,7 +21,7 @@ using TreehouseDefense;
             }
         );
         Invader[] invaders = {
-          new Invader(path),
+          new ShieldedInvader(path),
           new Invader(path),
           new Invader(path),
           new Invader(path)

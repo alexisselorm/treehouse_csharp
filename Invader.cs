@@ -25,9 +25,9 @@ namespace TreehouseDefense{
     public Invader (Path path) {
       _path = path;
     }
-    public void Move() => _pathStep+=1;
+    public  void Move() => _pathStep+=1;
 
-    public void DecreaseHealth(int factor) =>   Health -= factor;
+    public virtual void DecreaseHealth(int factor) =>   Health -= factor;
     
   }
 }
