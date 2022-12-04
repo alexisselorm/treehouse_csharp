@@ -2,10 +2,10 @@ using System;
 namespace TreehouseDefense{
   class Tower{
     private readonly MapLocation _location;
-       // Constant variables
-    private const int _range=1;
-    private const int _power =1;
-    private const double _accuracy = .75;
+       // Constant readonly variables
+    protected virtual int Range{get;}=1;
+    protected virtual int Power {get;}=1;
+    protected virtual double Accuracy {get;}= .75;
 
     private static readonly Random _random = new Random();
 
@@ -16,7 +16,7 @@ namespace TreehouseDefense{
 
     public bool IsSuccessfulShot(){
       // The chance that a tower hits an invader is 75%(.75) so if the random number generated is less than .75, the shot hit the target, miss otherwise.
-      return _random.NextDouble() < _accuracy;
+      return _random.NextDouble() < Accuracy;
     }
     
     public void FireOnInvaders(Invader[] invaders)
@@ -25,11 +25,11 @@ namespace TreehouseDefense{
       
       foreach(Invader invader in invaders){
         // Do something with invader
-        if(invader.IsActive && _location.InRangeOf(invader.Location,_range))
+        if(invader.IsActive && _location.InRangeOf(invader.Location,Range))
         {
           if(IsSuccessfulShot()){
             
-           invader.DecreaseHealth(_power);
+           invader.DecreaseHealth(Power);
             Console.WriteLine("Shot at and hit an invader");
 
             if(invader.IsNeutralized){
