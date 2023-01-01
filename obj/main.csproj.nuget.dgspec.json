@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/MediumorchidCommonConsulting/main.csproj": {}
+    "C:\\Users\\AGKove\\Documents\\Projects\\treehouse_csharp\\main.csproj": {}
   },
   "projects": {
-    "/home/runner/MediumorchidCommonConsulting/main.csproj": {
+    "C:\\Users\\AGKove\\Documents\\Projects\\treehouse_csharp\\main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/MediumorchidCommonConsulting/main.csproj",
+        "projectUniqueName": "C:\\Users\\AGKove\\Documents\\Projects\\treehouse_csharp\\main.csproj",
         "projectName": "main",
-        "projectPath": "/home/runner/MediumorchidCommonConsulting/main.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/MediumorchidCommonConsulting/obj/",
+        "projectPath": "C:\\Users\\AGKove\\Documents\\Projects\\treehouse_csharp\\main.csproj",
+        "packagesPath": "C:\\Users\\AGKove\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AGKove\\Documents\\Projects\\treehouse_csharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\AGKove\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/nix/store/jsm5am5i2b2izvwzbw5h6lk3plvpkrlw-dotnet-sdk-6.0.100/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
