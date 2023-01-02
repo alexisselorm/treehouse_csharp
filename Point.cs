@@ -10,6 +10,9 @@ namespace TreehouseDefense{
             X = x;
             Y = y;
         }
+        public override string ToString(){
+            return X+","+Y;
+        }
 
     // Check if  invader is in range of a tower
     public int DistanceTo(int x, int y){

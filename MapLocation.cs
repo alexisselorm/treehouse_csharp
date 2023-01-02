@@ -10,7 +10,7 @@ namespace TreehouseDefense
 // 'This' refers to the object that is being constructed. 'In this scope'
      if(!map.OnMap(this))
      {
-       throw new OutOfBoundsException(x+" , "+y+ " is outside the boundaries of the map");
+       throw new OutOfBoundsException(this+ " is outside the boundaries of the map");
      }
     }
 

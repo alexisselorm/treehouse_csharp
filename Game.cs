@@ -20,6 +20,14 @@ using TreehouseDefense;
              new MapLocation(7,2,map)
             }
         );
+
+        MapLocation location = new MapLocation(0,2,map);
+        if(path.IsOnPath(location)){
+          Console.WriteLine($"{location} is on path");
+          return;
+        }
+
+
         Invader[] invaders = {
           new ShieldedInvader(path),
           new Invader(path),

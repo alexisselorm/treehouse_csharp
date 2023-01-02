@@ -3,7 +3,6 @@ namespace TreehouseDefense{
     private static System.Random _random = new System.Random();
     public ShieldedInvader(Path path) : base(path)
     {
-      
     }
     // Polymorphic
         public override void DecreaseHealth(int factor)
