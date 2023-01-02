@@ -21,18 +21,19 @@ using TreehouseDefense;
             }
         );
 
-        MapLocation location = new MapLocation(0,2,map);
-        if(path.IsOnPath(location)){
-          Console.WriteLine($"{location} is on path");
-          return;
-        }
+        // MapLocation location = new MapLocation(0,2,map);
+        // if(path.IsOnPath(location)){
+        //   Console.WriteLine($"{location} is on path");
+        //   return;
+        // }
 
 
-        Invader[] invaders = {
+        IInvader[] invaders = {
           new ShieldedInvader(path),
           new BasicInvader(path),
           new BasicInvader(path),
-          new BasicInvader(path)
+          new BasicInvader(path),
+          new ResurrectingInvader(path),
           };
 
         Tower[] towers = {

@@ -7,8 +7,6 @@ namespace TreehouseDefense{
     protected virtual int Power {get;}=1;
     protected virtual double Accuracy {get;}= .75;
 
-    private static readonly Random _random = new Random();
-
     public Tower(MapLocation location)
     {
       _location = location;
@@ -16,7 +14,7 @@ namespace TreehouseDefense{
 
     public bool IsSuccessfulShot(){
       // The chance that a tower hits an invader is 75%(.75) so if the random number generated is less than .75, the shot hit the target, miss otherwise.
-      return _random.NextDouble() < Accuracy;
+      return Random.NextDouble() < Accuracy;
     }
     
     public void FireOnInvaders(IInvader[] invaders)

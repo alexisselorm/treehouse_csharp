@@ -1,7 +1,13 @@
 namespace TreehouseDefense;
 
-interface IInvader{
+interface IMappable{
       MapLocation Location{get;}
+}
+interface IMovable{
+      void Move();
+}
+
+interface IInvader : IMovable,IMappable{
 
     // Create a health property for the invader. Its getter is public so that users may see its health. but the setter is private. If other classes want to change the value or health, they can use the 'DecreaseHealth' method
      int Health { get; }
@@ -12,8 +18,6 @@ interface IInvader{
      bool IsNeutralized{get;}
 
      bool IsActive {get;}
-
-      void Move();
 
       void DecreaseHealth(int factor);
     
