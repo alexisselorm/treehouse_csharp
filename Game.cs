@@ -30,9 +30,9 @@ using TreehouseDefense;
 
         Invader[] invaders = {
           new ShieldedInvader(path),
-          new Invader(path),
-          new Invader(path),
-          new Invader(path)
+          new BasicInvader(path),
+          new BasicInvader(path),
+          new BasicInvader(path)
           };
 
         Tower[] towers = {

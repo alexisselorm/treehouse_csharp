@@ -1,6 +1,6 @@
 namespace TreehouseDefense{
-  class Invader{
-
+  abstract class Invader
+  {
     private int _pathStep = 0;
     private readonly Path _path;
 
