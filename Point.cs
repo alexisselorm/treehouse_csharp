@@ -20,6 +20,9 @@ namespace TreehouseDefense{
             Point that= obj as Point;
             return this.X == that.X && this.Y == that.Y;
         }
+        public override int GetHashCode(){
+         return X.GetHashCode() *31 + Y.GetHashCode();   
+        }
     // Check if  invader is in range of a tower
     public int DistanceTo(int x, int y){
       // Use distance formula - cartesian
@@ -39,9 +42,5 @@ namespace TreehouseDefense{
             return DistanceTo(point.X, point.Y);
         }
 
-        public override int GetHashCode()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
