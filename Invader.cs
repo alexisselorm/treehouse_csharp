@@ -14,7 +14,7 @@ namespace TreehouseDefense{
     public MapLocation Location => _path.GetLocationAt(_pathStep);
 
     // Create a health property for the invader. Its getter is public so that users may see its health. but the setter is private. If other classes want to change the value or health, they can use the 'DecreaseHealth' method
-    public virtual int Health { get; protected set; } = 2;
+    public abstract int Health { get; protected set; }
 
     // If invader has reached the end of the path
     public bool HasScored {
