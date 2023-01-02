@@ -19,7 +19,7 @@ namespace TreehouseDefense{
       return _random.NextDouble() < Accuracy;
     }
     
-    public void FireOnInvaders(Invader[] invaders)
+    public void FireOnInvaders(IInvader[] invaders)
     {
    
       
