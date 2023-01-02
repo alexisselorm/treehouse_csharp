@@ -21,7 +21,7 @@ namespace TreehouseDefense{
     {
    
       
-      foreach(Invader invader in invaders){
+      foreach(IInvader invader in invaders){
         // Do something with invader
         if(invader.IsActive && _location.InRangeOf(invader.Location,Range))
         {
